@@ -1,6 +1,13 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let reg=/[\W_]/g;
+  let smallWord=word.toLowerCase().replace(reg,"");
+
+  let reversed=smallWord.split("").reverse().join("");
+  if(reversed=smallWord) return true;
+  
 }
+
 
 /* 
   Add your pseudocode here
@@ -20,6 +27,20 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("a"));
+
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("ab"));
+
+ 
+  console.log("");
+
 }
 
 module.exports = isPalindrome;
