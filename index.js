@@ -1,12 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
-  let reg=/[\W_]/g;
-  let smallWord=word.toLowerCase().replace(reg,"");
-
-  let reversed=smallWord.split("").reverse().join("");
-  if(reversed=smallWord) return true;
-  
+  let l = word.length;
+  for (let i = 0; i < l/2; i++) {
+   if (word[i] !== word[l - 1 - i]) {
+    return false;
+   }
+  }
+  return true;
 }
+
 
 
 /* 
