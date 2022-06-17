@@ -7,7 +7,7 @@ function isPalindrome(word) {
    }
   }
   return true;
-}
+};
 
 
 
